@@ -72,3 +72,15 @@ else:
     a = str(a)
     b = a[::-1]
     print(int(b))
+
+# Standard American Convention
+num = 1234567890
+print(f"{num:,}")
+
+# Josephus problem
+n = 50
+k = 25      
+j = 0
+for i in range(1, n + 1):
+    j = (j + k) % i
+print(j + 1)
