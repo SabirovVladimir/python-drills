@@ -84,3 +84,48 @@ j = 0
 for i in range(1, n + 1):
     j = (j + k) % i
 print(j + 1)
+
+# Dots count
+dots_count = int(input().strip())
+
+dots = []
+
+for i in range (dots_count):
+    x, y = map(int, input().split())
+    dots.append((x, y))
+print(dots)
+
+q1 = q2 = q3= q4 = 0
+
+for x, y in dots:
+    if x > 0 and y > 0:
+        q1 += 1
+    elif x < 0 and y > 0:
+        q2 += 1
+    elif x < 0 and y < 0:
+        q3 += 1
+    elif x > 0 and y < 0:
+        q4 += 1
+print(f"Первая четверть: {q1}\nВторая четверть: {q2}\nТретья четверть: {q3}\nЧетвертая четверть: {q4}")
+
+# Bigger then previous
+n = str('1 2 3 4 5 6 7 8 9')
+numbers = list(map(int, n.split()))
+numbers_count = len(numbers)
+bigger = 0
+for i in range(1, numbers_count):
+    if numbers[i] > numbers[i - 1]:
+        bigger += 1
+print(bigger)
+
+# Back, forward and vice versa
+n = '1 2 3 4 5 6 7 8 9'
+numbers = list(map(int, n.split()))
+numbers_count = len(numbers)
+for i in range(0, numbers_count - 1, 2):
+    numbers[i], numbers[i + 1] = numbers[i + 1], numbers[i]
+print(*numbers)
+
+
+
+
