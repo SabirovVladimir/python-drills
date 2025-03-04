@@ -154,4 +154,18 @@ for i in range(numbers_count):
             break
 print("YES" if flag else "NO")
 
+# rock paper scissors
+Rus = str(input())
+Tim = str(input())
+if Rus == 'Rock' and Tim == 'Scissors':
+    print('Rus WIN')
+elif Rus == 'Scissors' and Tim == 'Paper':
+    print('Rus WIN')
+elif Rus == 'Paper' and Tim == 'Rock':
+    print('Rus WIN')
+elif Rus == Tim:
+    print('DRAW')
+else:
+    print('Tim WIN')
+
 
