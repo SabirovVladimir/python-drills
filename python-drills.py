@@ -126,6 +126,32 @@ for i in range(0, numbers_count - 1, 2):
     numbers[i], numbers[i + 1] = numbers[i + 1], numbers[i]
 print(*numbers)
 
+# Developmental shift
+n = '1 2 3 4 5 6 7 8 9'
+numbers = list(map(int, n.split()))
+last_number = numbers[-1]
+new_numbers = [last_number] + numbers[:-1]
+print(*new_numbers)
 
+# Various elements
+n = '1 2 3 4 5 6 7 8 9 9 9 9 9'
+numbers = list(map(int, n.split()))
+new_numbers = []
+for number in numbers:
+    if number not in new_numbers:
+        new_numbers.append(number)
+print(len(new_numbers))
+
+# Product of numbers
+numbers_count = int(input().strip())
+numbers = list(map(int(input().split() for _ in range(numbers_count))))
+product = int(input().strip())
+flag = False
+for i in range(numbers_count):
+    for j in range(i+1, numbers_count):
+        if numbers[i] * numbers[j] == product:
+            flag = True
+            break
+print("YES" if flag else "NO")
 
 
