@@ -106,7 +106,7 @@ for x, y in dots:
         q3 += 1
     elif x > 0 and y < 0:
         q4 += 1
-print(f"Первая четверть: {q1}\nВторая четверть: {q2}\nТретья четверть: {q3}\nЧетвертая четверть: {q4}")
+print(f"First quarter: {q1}\nSecond quarter: {q2}\nThird quarter: {q3}\nFourth quarter: {q4}")
 
 # Bigger then previous
 n = str('1 2 3 4 5 6 7 8 9')
@@ -168,4 +168,70 @@ elif Rus == Tim:
 else:
     print('Tim WIN')
 
+# rock paper scissors lizard spock
+Rus = str(input())
+Tim = str(input())
+if Rus == 'Rock' and (Tim == 'Scissors' or Tim == 'Lizard'):
+    print('Rus WIN')
+elif Rus == 'Scissors' and (Tim == 'Paper' or Tim == 'Lizard'):
+    print('Rus WIN')
+elif Rus == 'Paper' and (Tim == 'Rock' or Tim == 'Spock'):
+    print('Rus WIN')
+elif Rus == 'Lizard' and (Tim == 'Spock' or Tim == 'Paper'):
+    print('Rus WIN')
+elif Rus == 'Spock' and (Tim == 'Rock' or Tim == 'Scissors'):
+    print('Rus WIN')
+elif Rus == Tim:
+    print('DRAW')
+else:
+    print('Tim WIN')
 
+# Heads and tails
+string = 'ОРРОРОРООРРРО'
+len_str = len(string)
+max_count = 0
+for i in range(len_str):
+    count = 0
+    if string[i] == 'Р':
+        count += 1
+    for j in range(i + 1, len_str):
+        if string[j] == 'Р':
+            count += 1
+        else:
+            break
+    if count > max_count:
+        max_count = count
+print(max_count)
+
+# Silicon Valley
+n = int(input())
+strings = list(str(input().strip()) for _ in range(n))
+frig_num = []
+for o in range (n):
+    string = strings[o]
+    word = []
+
+    for char in string:
+        if char == 'a' and len(word) == 0:
+            word.append(char)
+        elif char == 'n' and len(word) == 1:
+            word.append(char)
+        elif char == 't' and len(word) == 2:
+            word.append(char)
+        elif char == 'o' and len(word) == 3:
+            word.append(char)
+        elif char == 'n' and len(word) == 4:
+            word.append(char)
+    if len(word) == 5:
+        frig_num.append(o+1)
+print(*frig_num)
+
+# Roskomnadzor banned the letter a
+word = str(input().strip())
+phrase = word + ' banned the letter'
+
+letters = sorted(set(phrase.replace(' ', '')))
+for letter in letters:
+    print(phrase, letter)
+    phrase = " ".join(phrase.split())
+    phrase = phrase.replace(letter, '')
