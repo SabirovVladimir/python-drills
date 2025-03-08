@@ -281,4 +281,16 @@ for i in range(len(list1)):
 average = total / counter
 print(average)
 
+# Sample list 1
+n = 3
+my_list = [[j + 1 for j in range(n)] for i in range(n)]
+for row in my_list:
+    print(*row)
 
+# Sample list 2
+n=3
+my_list = [[j + 1 for j in range(i+1)] for i in range(n)]
+for row in my_list:
+    print(row)
+
+# Pascal's Triangle 1
