@@ -3,7 +3,7 @@ from math import sqrt
 # math operations
 a = 3
 b = 8
-print(a + b) # 
+print(a + b) #
 print(a - b)
 print(a * b)
 print(a / b)
@@ -37,18 +37,18 @@ words_count = len(words)
 print(f"space count {space_count}, words count {words_count}")
 
 # Chinese zodiac
-years_dict = { 
-    8: "Dragon", 
-    9: "Snake", 
-    10: "Horse", 
-    11: "Goat", 
-    0: "Monkey", 
-    1: "Rooster", 
-    2: "Dog", 
-    3: "Pig", 
-    4: "Rat", 
-    5: "Ox", 
-    6: "Tiger", 
+years_dict = {
+    8: "Dragon",
+    9: "Snake",
+    10: "Horse",
+    11: "Goat",
+    0: "Monkey",
+    1: "Rooster",
+    2: "Dog",
+    3: "Pig",
+    4: "Rat",
+    5: "Ox",
+    6: "Tiger",
     7: "Rabbit"
 }
 year = 2020
@@ -79,7 +79,7 @@ print(f"{num:,}")
 
 # Josephus problem
 n = 50
-k = 25      
+k = 25
 j = 0
 for i in range(1, n + 1):
     j = (j + k) % i
@@ -277,7 +277,7 @@ counter = 0
 for i in range(len(list1)):
     for j in range(len(list1[i])):
         total += list1[i][j]
-        counter += 1    
+        counter += 1
 average = total / counter
 print(average)
 
@@ -294,3 +294,12 @@ for row in my_list:
     print(row)
 
 # Pascal's Triangle 1
+n = 3
+def pascal(n):
+    row = [1]
+    for k in range(1, n + 1):
+        row.append(row[-1] * (n - k + 1) // k)
+    return row
+
+print(pascal(n))
+
